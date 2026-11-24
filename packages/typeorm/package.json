@@ -76,14 +76,14 @@
     "typeorm-ts-node-esm": "./cli-ts-node-esm.js"
   },
   "scripts": {
-    "compile": "gulp clean:compiled && tsc",
+    "compile": "gulp clean:compiled && tsc -p test",
     "lint": "eslint",
     "package": "gulp package",
     "test": "pnpm run compile && pnpm run test:fast --",
     "test:ci": "mocha --bail",
     "test:fast": "mocha",
-    "typecheck": "tsc --noEmit",
-    "watch": "tsc --watch"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p test",
+    "watch": "tsc --watch -p test"
   },
   "dependencies": {
     "@sqltools/formatter": "^1.2.5",

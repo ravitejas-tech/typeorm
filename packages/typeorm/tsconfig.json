@@ -5,8 +5,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "Node20",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -23,5 +22,5 @@
   },
   "exclude": ["build", "node_modules", "temp"],
   "extends": "@tsconfig/node20/tsconfig.json",
-  "include": ["src", "test", "*.ts"]
+  "include": ["src", "*.ts"]
 }
